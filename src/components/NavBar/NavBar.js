@@ -1,8 +1,9 @@
-// import './navbar.css';
-import './style.css';
+import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 function Navbar() {
     return (
+        <>
         <nav className="navbar navbar-expand-lg celeste">
             <div className="container-fluid">
                 <a className="navbar-brand blanco" href="#">TecnoConectados</a>
@@ -27,6 +28,9 @@ function Navbar() {
                 </div>
             </div>
         </nav>
+        <CartWidget />
+        </>
+        
 
     );
   }
