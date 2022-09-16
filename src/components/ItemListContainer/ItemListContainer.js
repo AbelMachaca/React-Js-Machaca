@@ -1,8 +1,25 @@
-
+import React, { useEffect, useState } from 'react';
+import Products from '../Products/Products';
+import { CustomFetch } from '../CustomFetch/CustomFetch';
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = (props) => {
+
+    const [ListProducts, setListProducts] = useState ([])
+
+    useEffect(() => {
+        CustomFetch(Products)
+        .then(data=> setListProducts(data))
+
+    },[])
+
+    
+    console.log(ListProducts)
     return (
-        <h2>{props.item}</h2>
+        <>
+
+        <div><ItemList ListProducts = {ListProducts}/></div>
+        </>
     );
 }
 
