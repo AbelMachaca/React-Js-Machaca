@@ -4,8 +4,7 @@ export const CustomFetch = (item) => {
             () => {
                 resolve(item);
             },
-            2000
-        );
+            2000);
     });
 };
 
