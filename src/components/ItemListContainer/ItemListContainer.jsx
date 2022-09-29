@@ -13,14 +13,12 @@ const ItemListContainer = (props) => {
         return new Promise ((resolve, reject) => {
             setTimeout(()=> {
 
-                if(categoria ) {
-                    resolve(Products.filter((item)=> item.categoria == categoria));
+                if(categoria) {
+                    resolve(Products.filter((item)=> item.categoria === categoria));
                 } else resolve(itemF);
                 }, 2000);
         });
     }
-
-
 
 
     useEffect(() => {

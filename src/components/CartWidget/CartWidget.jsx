@@ -1,9 +1,9 @@
-import { Cart } from 'react-bootstrap-icons';
+import { MdShoppingCart } from 'react-icons/md';
 
 const CartWidget = () => {
     return (
       <div>
-        <Cart />
+        <MdShoppingCart />
   
       </div>
     );

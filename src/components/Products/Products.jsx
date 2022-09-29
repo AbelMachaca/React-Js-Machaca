@@ -5,6 +5,7 @@ const Products = [
         price: 10000,
         description: "El Galaxy A01 Core está diseñado con 1GB de memoria RAM para un rendimiento fluido y 16GB de memoria interna. Además, Android (edición Go) te ayuda a mantener el almacenamiento limpio, con aplicaciones preinstaladas personalizadas y optimizadas para un uso rápido y fácil.",
         pictureUrl: "https://i.ibb.co/SN2BJG3/a01core.webp",
+        stock: 5,
         categoria: "TelefonoA01Core"
     },
     {
@@ -13,6 +14,7 @@ const Products = [
         price: 13000,
         description: "El a11 está diseñado con 1GB de memoria RAM para un rendimiento fluido y 16GB de memoria interna. Además, Android (edición Go) te ayuda a mantener el almacenamiento limpio, con aplicaciones preinstaladas personalizadas y optimizadas para un uso rápido y fácil.",
         pictureUrl: "https://i.ibb.co/0n3Z3Sp/a11.webp",
+        stock: 5,
         categoria: "TelefonoA11"
     },
     {
@@ -21,6 +23,7 @@ const Products = [
         price: 15000,
         description: "El a21s está diseñado con 1GB de memoria RAM para un rendimiento fluido y 16GB de memoria interna. Además, Android (edición Go) te ayuda a mantener el almacenamiento limpio, con aplicaciones preinstaladas personalizadas y optimizadas para un uso rápido y fácil.",
         pictureUrl: "https://i.ibb.co/c2Gj8DP/a21s.webp",
+        stock: 5,
         categoria: "TelefonoA21s"
     },
     {
@@ -29,6 +32,7 @@ const Products = [
         price: 20000,
         description: "El a32 está diseñado con 1GB de memoria RAM para un rendimiento fluido y 16GB de memoria interna. Además, Android (edición Go) te ayuda a mantener el almacenamiento limpio, con aplicaciones preinstaladas personalizadas y optimizadas para un uso rápido y fácil.",
         pictureUrl: "https://i.ibb.co/K6V75Tf/a32.webp",
+        stock: 3 ,
         categoria: "TelefonoA32"
     }
 ]
