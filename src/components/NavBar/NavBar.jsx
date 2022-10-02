@@ -14,22 +14,23 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item"> 
-                            <Link className="nav-link blanco" aria-current="page" to='category/TelefonoA01Core'>categoria 1</Link>
+                            <Link className="nav-link blanco" aria-current="page" to='category/1'>categoria 1</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link blanco" to='category/TelefonoA11'>categoria 2</Link>
+                            <Link className="nav-link blanco" to='category/2'>categoria 2</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link blanco" to='category/TelefonoA21s'>categoria 3</Link>
+                            <Link className="nav-link blanco" to='category/3'>categoria 3</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link blanco" to='category/TelefonoA32'>categoria 4</Link>
+                            <Link className="nav-link blanco" to='category/4'>categoria 4</Link>
                         </li>
                     </ul>
                 </div>
+                <Link className="blanco" to='/cart'> <CartWidget /> </Link>
             </div>
         </nav>
-        <Link to='/cart'> <CartWidget /> </Link>
+        
         </>
         
 

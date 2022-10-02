@@ -13,8 +13,8 @@ const App = () => {
         <NavBar/>
         <Routes>
           <Route exact path='/' element= { <ItemListContainer item={"primer itemlist"}/>}/> 
-          <Route path='category/:categoria' element= { <ItemListContainer item={"primer itemlist"}/>}/> 
-          <Route path='item/:id' element={<ItemDetailContainer />} />
+          <Route path='/category/:category' element= { <ItemListContainer item={"primer itemlist"}/>}/> 
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
       </Router>

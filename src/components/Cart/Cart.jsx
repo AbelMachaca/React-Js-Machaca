@@ -32,13 +32,9 @@ const Cart = () => {
                 <td>
                     <img src={item.pictureUrl} alt="" width="150px" height="200px" />
                 </td>
-            
                 <td>Telefono: {item.title}</td>
-                <br /><br />
                 <td>Precio: ${item.price} </td>
-                <br />
                 <td>Cantidad: {item.qty} </td>
-            
                 <div>
                 <button onClick={() => ctx.removeItem (item.id)}>Borrar Producto</button>
                 </div>
@@ -48,7 +44,7 @@ const Cart = () => {
         </table>
 
 
-<div >
+<div>
       <div>
           <div>
               <h3>Cantidad de productos agregados:  {ctx.productsTotal()}</h3>

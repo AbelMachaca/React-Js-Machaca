@@ -1,22 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Item = ({product}) => {
-    console.log(product.title)
-  return (
-    <>
-    <div>
-        <div>
-          <img src={product.pictureUrl} alt="" width="150px" height="200px" />
-        </div>
-            <h3>{product.title}</h3>
-            <p>{product.price} </p>
-          <Link to={`/item/${product.id}`}>
-            <button>Detalle de Item</button>
-          </Link>
-    </div>
-    </>
-  );
+function Item({id,title,pictureUrl,price, description}){
+  return(
+      <div id={id}>
+          <div>
+            <img src={pictureUrl}  alt={title} width="150px" height="200px"/>
+          </div>
+          <div>
+            <h3>{title}</h3>
+              <p>Descripción:{description}</p>
+              <p>Precio: ${price}</p>
+            <Link to={`/item/${id}`}><button type="button" > Detalle del producto</button> </Link>
+          </div>
+      </div>
+  )
 }
 
 export default Item;

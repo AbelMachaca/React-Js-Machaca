@@ -1,40 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import Products from '../Products/Products';
-import ItemList from '../ItemList/ItemList';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
+import { db } from "../../utils/firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
-const ItemListContainer = (props) => {
-
-    const [ListProducts, setListProducts] = useState ([])
-    const {categoria} = useParams()
-    console.log(categoria)
-
-    const CustomFetch = (itemF) => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(()=> {
-
-                if(categoria) {
-                    resolve(Products.filter((item)=> item.categoria === categoria));
-                } else resolve(itemF);
-                }, 2000);
-        });
-    }
-
-
+const ItemListContainer = () => {
+    const [data, setData] = useState([]);
+    const { category } = useParams();
+  
     useEffect(() => {
-        CustomFetch(Products)
-        .then(data=> setListProducts(data));
+      async function fetchData() {
+        if (category) {
+          const q = query(collection(db, "products"), where("category", "==", category));
+          const querySnapshot = await getDocs(q);
+          const dataFromFirestore = querySnapshot.docs.map((item) => ({
+            id: item.id,
+            ...item.data(),
+          }));
+          setData(dataFromFirestore);
+        } else {
+          const querySnapshot = await getDocs(collection(db, "products"));
+          const dataFromFirestore = querySnapshot.docs.map((item) => ({
+            id: item.id,
+            ...item.data(),
+          }));
+          setData(dataFromFirestore);
+        }
+      }
+      fetchData();
+    }, [category]);
 
-    },[categoria])
-
-    
-    console.log(ListProducts)
-    return (
-        <>
-
-        <div><ItemList ListProducts = {ListProducts}/></div>
-        </>
-    );
-}
+  return <ItemList item={data} />;
+};
 
 export default ItemListContainer;
