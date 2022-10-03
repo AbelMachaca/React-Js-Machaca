@@ -51,25 +51,26 @@ const Cart=()=>{
   return (
     <>
         <h1>Carrito</h1>
-        <div>
+        
         <button onClick={ctx.clear}>Borrar Todo</button>
-        {
-            ctx.cartList.map(product => 
-        <div> 
-            <div>
+        {ctx.cartList.map(product => 
+        (<div key =  {product.id}>
+        
                 <div>
                     <img src={product.pictureUrl} alt="" width="150px" height="200px" />
                 </div>
-                 <p>Telefono: {product.title}</p>
-               <p> Precio: ${product.price}  </p>
-                <p> Cantidad: {product.qty} </p>
+                    <p>Telefono: {product.title}</p>
+                    <p>Precio: ${product.price}  </p>
+                    <p>Cantidad: {product.qty} </p>
                 <div>
                  <Link onClick={() => ctx.removeItem (product.id)}>Borrar Producto</Link>
                 </div>
-            </div>
-        </div>)
+            
+         </div>
+        
+        ))
         }
-        </div>
+       
 
 
         <div>
@@ -83,12 +84,6 @@ const Cart=()=>{
             <h3>Total: ${ctx.priceTotal()}</h3>
           </div>
           <button onClick={createOrder}>Terminar compra</button>
-          
-          
-
-          
-      
-    
       </div>
     </>
   );
