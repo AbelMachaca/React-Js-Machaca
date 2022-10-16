@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { serverTimestamp, doc, setDoc,collection, updateDoc,increment } from "firebase/firestore";
 import  db from "../../utils/firebaseConfig";
 
+
+
 const Cart=()=>{
     const ctx=  useContext(CartContext);
     const itemsDb=ctx.cartList.map(item=>({
@@ -61,9 +63,10 @@ const Cart=()=>{
                 </div>
                     <p>Telefono: {product.title}</p>
                     <p>Precio: ${product.price}  </p>
-                    <p>Cantidad: {product.qty} </p>
+                    <p>Cantidad: {product.quantity} </p>
                 <div>
-                 <Link onClick={() => ctx.removeItem (product.id)}>Borrar Producto</Link>
+                 <button onClick={() => ctx.removeItem (product.id)} > Borrar Producto</button>
+                 
                 </div>
             
          </div>

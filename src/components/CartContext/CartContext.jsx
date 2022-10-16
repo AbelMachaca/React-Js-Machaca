@@ -5,10 +5,7 @@ export const CartContext = createContext();
 const CartContextProvider = ({ children }) => { 
 
     const [ cartList , setCartList] = useState([]);
-    
-
-
-
+  
 
     const calcItemsQty=()=>{
         let qtys= cartList.map(prod=> prod.quantity);
@@ -55,7 +52,7 @@ const CartContextProvider = ({ children }) => {
 
     }
 
-    return(
+    return( 
         <CartContext.Provider value={{
          cartList,
          addItem, 

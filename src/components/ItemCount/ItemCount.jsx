@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({stock, onAdd}) => {
 
         const [contador, setContador] = useState(0);
 
