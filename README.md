@@ -6,7 +6,7 @@ Proyecto realizado con diversos desafios para el curso de React.js brindado por 
 Consiste en un e-commerce que vende Telefónos celular de distintos modelos y marcas.
 Con los distintos botones podes acceder a distintas categorias de productos, seleccionar la cantidad de productos deseados, agregarlos a un carrito de compras y por último crear una orden de compras. 
 
-![image](https://media.giphy.com/media/ifmPfqOyzKUwXrTve7/giphy.gif)
+![image](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODl0YjdvNzFoeXh5YWxiYXI4NDEyaHM5Ym9odGR1d29mbzBwaGE1aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/blTe1Eis00CkRdPoOR/giphy.gif)
 
   ### Instalación 🛠
 
