@@ -33,77 +33,77 @@
 }
 
 .card {
-    background-color: #fff; /* Color de fondo de la tarjeta */
-    border: 1px solid #007bff; /* Borde de la tarjeta */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; 
+    border: 1px solid #007bff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     
   }
   
   .card:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el cursor */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   }
   
   .card img {
-    max-width: 100%; /* Imagen dentro de la tarjeta con ancho máximo */
-    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 100%; 
+    height: auto; 
   }
   
   .card-title {
-    font-size: 1.25rem; /* Tamaño del título */
-    margin-bottom: 0.5rem; /* Margen inferior */
+    font-size: 1.25rem; 
+    margin-bottom: 0.5rem; 
   }
   
   .card-text {
-    color: #555; /* Color del texto */
-    font-size: 1rem; /* Tamaño del texto */
+    color: #555; 
+    font-size: 1rem; 
   }
   
   .card-footer {
-    padding-top: 1rem; /* Espaciado superior en el pie de la tarjeta */
+    padding-top: 1rem; 
   }
 
   .item-detail {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Margen superior */
+    margin-top: 20px; 
   }
   
   .item-detail-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
     margin: 30px;
   }
   
   .item-detail-image {
-    flex: 0 0 auto; /* No se estira */
-    margin-right: 20px; /* Margen derecho */
+    flex: 0 0 auto; 
+    margin-right: 20px; 
   }
   
   .item-detail-info {
-    flex: 1; /* Se expande */
+    flex: 1; 
   }
   
   .item-detail-title {
-    font-size: 1.5rem; /* Tamaño del título */
-    margin-bottom: 10px; /* Margen inferior */
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
   }
   
   .item-detail-description {
-    margin-bottom: 10px; /* Margen inferior */
+    margin-bottom: 10px; 
   }
   
   .item-detail-price {
-    margin-bottom: 10px; /* Margen inferior */
+    margin-bottom: 10px; 
   }
   
   .item-detail-stock {
-    margin-bottom: 20px; /* Margen inferior */
+    margin-bottom: 20px; 
   }
   
   .item-detail-buttons {
@@ -114,49 +114,49 @@
   
 
   .item-detail-buttons button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
     cursor: pointer;
     margin: 7px;
   }
   
   .item-detail-buttons button:hover {
     
-    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+    background-color: #0056b3; 
   }
   
   .cart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px; /* Ancho máximo del contenedor */
-    margin: 20px auto; /* Margen y centrado */
-    padding: 20px; /* Espaciado interno */
-    background-color: #fff; /* Color de fondo */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .cart-buttons {
-    margin-top: 20px; /* Margen superior para los botones */
+    margin-top: 20px; 
   }
   
   .cart-buttons button {
-    margin: 10px; /* Margen entre los botones */
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
     cursor: pointer;
   }
   
   .cart-buttons button:hover {
-    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+    background-color: #0056b3; 
   }
   
   .cart-total{
@@ -170,10 +170,10 @@
 
   .cart-product {
     display: flex;
-    align-items: center; /* Alinea los elementos verticalmente */
+    align-items: center; 
   }
   .cart-product img {
-    max-width: 150px; /* Tamaño máximo de la imagen */
-    max-height: 200px; /* Altura máxima de la imagen */
-    margin-right: 20px; /* Margen derecho */
+    max-width: 150px; 
+    max-height: 200px; 
+    margin-right: 20px; 
   }
