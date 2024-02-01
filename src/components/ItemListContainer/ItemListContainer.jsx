@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import  db  from "../../utils/firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import './ItemListContainer.css'
 
 const ItemListContainer = () => {
     const [data, setData] = useState([]);
@@ -30,7 +31,7 @@ const ItemListContainer = () => {
       fetchData();
     }, [category]);
 
-  return <ItemList item={data} />;
+  return <ItemList  item={data} />;
 };
 
 export default ItemListContainer;

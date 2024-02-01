@@ -39,57 +39,40 @@ const Cart=()=>{
         }
       
      if (ctx.cartList.length===0){
-      return (<>
-       <div>
-            <div>
-                <h2> Carrito</h2>
-                <h3>No hay ningún producto en el carrito.</h3>
-                <Link to='/' >Regresar para Comprar</Link>
-            </div>
-       </div>
-              
-      </>)}
-
-  return (
-    <>
+      return (
+        <div className="cart-container">
+          <h2>Carrito</h2>
+          <div className="cart-empty">
+            <h3>No hay ningún producto en el carrito.</h3>
+            <Link to='/'>Regresar para Comprar</Link>
+          </div>
+        </div>
+      );
+    }
+  
+    return (
+      <div className="cart-container cart-buttons">
         <h1>Carrito</h1>
-        
         <button onClick={ctx.clear}>Borrar Todo</button>
-        {ctx.cartList.map(product => 
-        (<div key =  {product.id}>
-        
-                <div>
-                    <img src={product.pictureUrl} alt="" width="150px" height="200px" />
-                </div>
-                    <p>Telefono: {product.title}</p>
-                    <p>Precio: ${product.price}  </p>
-                    <p>Cantidad: {product.quantity} </p>
-                <div>
-                 <button onClick={() => ctx.removeItem (product.id)} > Borrar Producto</button>
-                 
-                </div>
-            
-         </div>
-        
-        ))
-        }
-       
-
-
-        <div>
-          <div>
-              <h3>Cantidad de productos agregados: {ctx.productsTotal()}</h3>
+        {ctx.cartList.map(product => (
+          <div className="cart-product" key={product.id}>
+            <img src={product.pictureUrl} style={{ width: "150px",}} alt="" />
+            <div className="cart-product-info">
+              <p>Telefono: {product.title}</p>
+              <p>Precio: ${product.price}</p>
+              <p>Cantidad: {product.quantity}</p>
+              <button onClick={() => ctx.removeItem(product.id)}>Borrar Producto</button>
+            </div>
           </div>
-          <div>
-              <h3>Subtotal: ${ctx.priceTotal()}</h3>
-          </div>
-          <div>
-            <h3>Total: ${ctx.priceTotal()}</h3>
-          </div>
+        ))}
+        <div className="cart-total">
+          <h3>Cantidad de productos agregados: {ctx.productsTotal()}</h3>
+          <h3>Subtotal: ${ctx.priceTotal()}</h3>
+          <h3>Total: ${ctx.priceTotal()}</h3>
           <button onClick={createOrder}>Terminar compra</button>
+        </div>
       </div>
-    </>
-  );
-}
+    );
+  }
 
 export default Cart;

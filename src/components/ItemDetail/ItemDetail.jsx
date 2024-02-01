@@ -24,31 +24,35 @@ const ItemDetail = ({ item }) => {
     
   return (
     <>
-      {
-      item && item.pictureUrl
-      ?
-      <div>
-      <div>
-          <div>
-            <img src={item.pictureUrl} alt="" width="150px" height="200px" />
+    {
+      item && item.pictureUrl ? (
+        <div className="item-detail">
+          <div className="item-detail-content">
+            <div className="item-detail-image">
+              <img src={item.pictureUrl} alt="" width="150px" height="200px" />
+            </div>
+            <div className="item-detail-info">
+              <h3 className="item-detail-title">Telefono: {item.title}</h3>
+              <p className="item-detail-description">Descripcion: {item.description}</p>
+              <p className="item-detail-price">Precio: ${item.price}</p>
+              <p className="item-detail-stock">Cantidad disponible: {item.stock}</p>
+              <div className="item-detail-buttons">
+                {itemCount === 0 ? (
+                  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                ) : (
+                  <Link to='/cart'>
+                  <button className="item-detail-cart-button">Ver Carrito</button>
+                </Link>
+                )}
+              </div>
+            </div>
           </div>
-          <div>
-            <h3>Telefono: {item.title}</h3>
-            <p>Descripcion: {item.description}</p>
-            <p>Precio: ${item.price} </p>
-            <p>Cantidad disponible: {item.stock} </p>
-          </div>
-          
-            {
-                itemCount === 0
-                ? <ItemCount  stock={item.stock} initial={itemCount} onAdd={onAdd} />
-                : <Link to='/cart'><button>Ver Carrito</button> </ Link>
-            }
-      </div>
-      </div>
-        : <p>Load...</p>
-        }
-    </>
+        </div>
+      ) : (
+        <p>Load...</p>
+      )
+    }
+  </>
   );
 }
 

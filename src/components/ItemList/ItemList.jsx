@@ -2,7 +2,8 @@ import Item from '../Item/Item';
 
 function ItemList ({item}){
     return (
-       <div >
+        <div className="container">
+       <div className="test">
        {item.map(product=>(< Item key= {product.id}
         id={product.id}
         title={product.title}
@@ -11,7 +12,9 @@ function ItemList ({item}){
           price={product.price}/>
 ))}
 </div>
+</div>
     );
+    
 }
 
 export default ItemList;

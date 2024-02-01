@@ -1,0 +1,179 @@
+ .test{
+    display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-top: 30px ;
+}
+
+
+.items{
+    width: 350px;
+    margin-right: 20px;
+} 
+
+.items p{
+    display: flex;
+    justify-content: center;
+}
+
+.items h5 {
+    display: flex;
+    justify-content: center;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    border: 1px solid #007bff; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el cursor */
+  }
+  
+  .card img {
+    max-width: 100%; /* Imagen dentro de la tarjeta con ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Tamaño del título */
+    margin-bottom: 0.5rem; /* Margen inferior */
+  }
+  
+  .card-text {
+    color: #555; /* Color del texto */
+    font-size: 1rem; /* Tamaño del texto */
+  }
+  
+  .card-footer {
+    padding-top: 1rem; /* Espaciado superior en el pie de la tarjeta */
+  }
+
+  .item-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Margen superior */
+  }
+  
+  .item-detail-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 30px;
+  }
+  
+  .item-detail-image {
+    flex: 0 0 auto; /* No se estira */
+    margin-right: 20px; /* Margen derecho */
+  }
+  
+  .item-detail-info {
+    flex: 1; /* Se expande */
+  }
+  
+  .item-detail-title {
+    font-size: 1.5rem; /* Tamaño del título */
+    margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .item-detail-description {
+    margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .item-detail-price {
+    margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .item-detail-stock {
+    margin-bottom: 20px; /* Margen inferior */
+  }
+  
+  .item-detail-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .item-detail-buttons button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin: 7px;
+  }
+  
+  .item-detail-buttons button:hover {
+    
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+  }
+  
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen y centrado */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .cart-buttons {
+    margin-top: 20px; /* Margen superior para los botones */
+  }
+  
+  .cart-buttons button {
+    margin: 10px; /* Margen entre los botones */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+  }
+  
+  .cart-buttons button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+  }
+  
+  .cart-total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .cart-product {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
+  .cart-product img {
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    max-height: 200px; /* Altura máxima de la imagen */
+    margin-right: 20px; /* Margen derecho */
+  }
